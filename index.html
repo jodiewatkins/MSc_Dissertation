@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scoffs</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/neo4j-driver@1.5.1/lib/browser/neo4j-web.min.js"></script>
+    <script src="./scripts/connection.js"></script>
+    <script src="./scripts/myscripts.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="./images/logoSml.png" alt="logo for Skoffs" width="52" height="52">
+        <h1>Skoffs</h1>
+    </div>
+    <div id="statusStrap">
+        <p id="strapline">Food nearby just the way you like it.....</p>
+    </div>
+    <div id="filters">
+        <hr>
+        <form id="options" title="filters for map">
+            <div id="category">
+                <h4><label for="categoerySelect">Cuisine</label></h4>
+                <select name="category" id="categoerySelect" onchange="newchangeCat()">
+                    <option value="Bagels">Bagels</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Donuts">Donuts</option>
+                    <option value="New Mexican Cuisine">New Mexican Cuisine</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Restaurants">Restaurants</option>
+                    <option value="Sandwiches">Sandwiches</option>
+                </select>
+            </div>
+            <div id="stars">
+                <h4><label for="starsSelect">Rating</label></h4>
+                <select name="stars" id="starsSelect" onchange="newchangeStars()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div id="distance">
+                <h4><label for="distRange">Distance (km)</label></h4>
+                <input type="range" id="distRange" name="distance" class="slider" min="0.0" max="100.0" value="0"
+                    onchange="newchangeDis()" /><span class="slider_label"></span>
+            </div>
+            <br>
+            <input type="button" id="butSearch" value="Search" onclick="dbSearch()">
+        </form>
+        <hr>
+    </div>
+    <div id="map"></div>
+    <div id="footer">
+        <p>Web application made by Jodie Edge for demonstrative purposes </p>
+    </div>
+
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1HBRa__GQRUs2_5LgdZOQtCJ3jop_ep4 &callback=initMap">
+    </script>
+
+</body>
+
+</html>

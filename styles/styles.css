@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+body{
+    background-color: #f1f0ee ;
+    font-family: 'Quicksand', sans-serif;
+    color: #0e185a;
+}
+
+#header {
+  background-color: #0e185a;
+  height: 55px;
+  text-align: left;
+}
+
+
+#logo{
+  float:left;
+  padding-right:1%;
+}
+
+#statusStrap{
+  font-style: italic;
+  height: 15px;
+  margin: 1%;
+  text-align:center;
+  padding-left:10%;
+  color: #0e185a;
+
+}
+
+#footer{
+  background-color: #0e185a;
+  text-align:right;
+  font-style:italic; 
+  font-size: 12pt;
+  height:10%;
+  color:#eee4a2;
+
+}
+
+
+h1{
+  font-size: 32pt;
+  font-weight: bold;
+  color:#eee4a2; 
+}
+
+h2,h3,h4{
+  text-align:left;
+  font-size: 12pt;
+  }
+
+#map{
+    height:350px;
+    width:80%;
+    justify-content:center;
+    margin-left: auto; 
+    margin-right: auto;
+    display: inline-block;
+}
+
+#filters{
+  text-align: center;
+
+    height:350px;
+    width:15%;
+    float:left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 5%;
+}
+
+#butSearch{
+  width: 100%;  
+  height: 5%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #0e185a;
+  color:#eee4a2;
+
+  
+}
+
+select{
+  width: 100%;  
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+label {
+display: block;
+padding-left: 15px;
+text-indent: -15px;
+text-align: center;
+}
+
+input {
+width: 75%;
+height: 13px;
+padding: 0;
+margin:0;
+vertical-align: left;
+position: relative;
+top: -1px;
+*overflow: hidden;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #6B7A8F  ; /* Grey background */
+ opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider_label{
+  text-align: center;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #000; /* Black background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #000;  /* Black background */
+  cursor: pointer; /* Cursor on hover */
+}
